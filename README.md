@@ -9,12 +9,12 @@ If you are currently taking the CS50W course, do not just copy the code mindless
 
 ## Table Of Contents
 
-- [Project 0: Search]() - <a href='https://cs50.harvard.edu/web/2020/projects/0/search/' target='_blank'> Specifications</a>
+- [Project 0: Search](/search/) - <a href='https://cs50.harvard.edu/web/2020/projects/0/search/' target='_blank'> Specifications</a>
   * Design a front-end for Google Search, Google Image Search, and Google Advanced Search.
   
 ## TODO
   
-- [Project 1: Wiki](/search/) - <a href='https://cs50.harvard.edu/web/2020/projects/1/wiki/#:~:text=Design%20a%20Wikipedia-like%20online%20encyclopedia.' target='_blank'> Specifications</a> 
+- [Project 1: Wiki]() - <a href='https://cs50.harvard.edu/web/2020/projects/1/wiki/#:~:text=Design%20a%20Wikipedia-like%20online%20encyclopedia.' target='_blank'> Specifications</a> 
   * Design a Wikipedia-like online encyclopedia.
 - [Project 2: Commerce]() - <a href='https://cs50.harvard.edu/web/2020/projects/2/commerce/' target='_blank'> Specifications</a> 
   * Design an eBay-like e-commerce auction site that will allow users to post auction listings, place bids on listings, comment on those listings, and add listings to a “watchlist.”
