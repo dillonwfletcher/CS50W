@@ -11,6 +11,7 @@ If you are currently taking the CS50W course, do not just copy the code mindless
 
 - [Project 0: Search](/search/) - <a href='https://cs50.harvard.edu/web/2020/projects/0/search/' target='_blank'> Specifications</a>
   * Design a front-end for Google Search, Google Image Search, and Google Advanced Search.
+  * [Video demonstration](https://www.youtube.com/watch?v=kCJ2XK7BQ_s)
   
 ## TODO
   
