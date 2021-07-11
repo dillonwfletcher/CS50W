@@ -1,0 +1,30 @@
+{% extends "auctions/layout.html" %}
+
+{% block body %}
+    <h2>Active Listings</h2>
+
+        {% for listing in listings %}
+
+            <section class="row">
+                
+                <div class="col-3">
+                    <img width="100%" src="{{ listing.image }}" alt="No Image">
+                </div>
+
+                <div class="col-6">
+                    <h3><b><a href="/listing/{{ listing.id }}">{{ listing.title }}</a></b></h3>
+
+                    <h4><b>Price: </b>{{ listing.current_bid }}</h4>
+
+                    <p>{{ listing.description}}</p>
+
+                    <p>Created: {{ listing.created }}  |  Bidding Ends: {{ listing.end }}</p>
+                </div>
+
+            </section> 
+
+        {% endfor %}
+
+   
+
+{% endblock %}

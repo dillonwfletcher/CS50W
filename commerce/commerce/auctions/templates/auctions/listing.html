@@ -1,0 +1,66 @@
+{% extends "auctions/layout.html" %}
+
+{% block body %}
+    <h2>Listing: {{ listing.title }}</h2>
+
+    {% if user.is_authenticated and listing.active %}
+        
+        <button class="btn btn-primary">
+            {% if in_watchlist %}
+                Remove from Watchlist
+            {% else %}
+                Add to Watchlist
+            {% endif %}
+        </button>
+    
+    {% else %}
+        
+        <h3>
+            Listing Closed!
+            
+            {% if listing.winner == user.username %}
+                {{ listing.winner }} 
+            {% else %}
+                Congratulations! You    
+            {% endif %}
+
+            won the auction!
+
+    {% endif %}
+
+    <div>
+        <img width="100%" src="{{ listing.image }}" alt="No Image">
+    </div>
+
+    <div>
+        <p>{{ listing.description }}</p>
+
+        <h4><b>Current Bid: </b>${{ listing.current_bid }}</h4>
+
+    </div>
+
+    <div>
+        <p>{{ listing.total_bids }} bid(s) so far.</p>
+        <form action="/listing/{{ listing.id }}" method="POST">
+            <p>todo create model form for bids</p>
+
+            {% if user.is_authenticated %}
+                <input class="btn btn-primary" type="submit" value="Place Bid">
+
+            {% endif %}
+        </form>
+    </div>
+
+    <div>
+        <h3>Details:</h3>
+        <ul>
+            <li>Listed by: {{ listing.user }}</li>
+            <li>Category: {{ listing.category }}</li>
+        </ul>
+    </div>
+
+
+
+   
+
+{% endblock %}

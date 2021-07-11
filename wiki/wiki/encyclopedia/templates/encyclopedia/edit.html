@@ -1,0 +1,28 @@
+{% extends "encyclopedia/layout.html" %}
+
+{% block title %}
+    Encyclopedia | Edit {{ title }}
+{% endblock %}
+
+{% block body %}
+
+    {% if error_msg %}
+        <div class="alert alert-warning w-50">
+           {{ error_msg }} 
+        </div>
+    {% endif %}
+
+    <h1>Editing {{ title }} Page</h1>
+    <form action="{% url 'encyclopedia:edit' title %}" method="post" class="w-50">
+        {% csrf_token %}
+        {% for field in form %}
+            <div class="form-group">
+                {{ field }}
+            </div>
+        {% endfor %}
+        <div class="form-group">
+            <input type="submit" class="form-control" value="Save">
+        </div>
+    </form>
+
+{% endblock %}
